@@ -21,13 +21,20 @@ license="GNU GPLv3"
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="rpghud" #mandatory
+modId="rpghudmanafied" #mandatory
 
 # The version number of the mod
 version="3.10.3" #mandatory
 
 # A display name for the mod
-displayName="RPG-HUD" #mandatory
+displayName="RPG-HUD-Manafied" #mandatory
+
+[[dependencies.rpghudmanafied]]
+modId = "irons_spellbooks"
+mandatory = true
+versionRange = "[1.21.1-3.16.1,)"
+ordering = "NONE"
+side = "BOTH"
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
@@ -42,11 +49,11 @@ displayName="RPG-HUD" #mandatory
 #credits="" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
-authors="Raelzaryn"
+authors="Raelzaryn, Turevo"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-This mod changes the way the HUD is rendered and adds several new functionalities and styles (mainly RPG-like styles)
+A fork of Raelzaryn's RPG-HUD mod that replaces the hunger bar with a Mana bar integrated with Iron's Spells 'n Spellbooks. Intended for use in the modpack "Starforged".
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.

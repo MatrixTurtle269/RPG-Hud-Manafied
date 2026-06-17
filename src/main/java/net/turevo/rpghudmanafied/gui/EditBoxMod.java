@@ -1,0 +1,44 @@
+package net.turevo.rpghudmanafied.gui;
+
+import net.minecraft.client.gui.Font;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.network.chat.Component;
+
+
+public class EditBoxMod extends EditBox {
+
+    /** Variable to contain the (possible) setting of this button */
+    public final String enumOptions;
+    /** Array that contains the tooltip of this button */
+    private String[] tooltip;
+    
+    private final ValueType type;
+    
+    public EditBoxMod(Font fontIn, ValueType type, int xIn, int yIn, int widthIn, int heightIn, Component msg) {
+        super(fontIn, xIn, yIn, widthIn, heightIn, msg);
+        this.type = type;
+        this.enumOptions = null;
+    }
+    
+    public ValueType getValueType() {
+        return type;
+    }
+    
+    public enum ValueType{
+        DOUBLE,
+        POSITION;
+    }
+    
+    /**
+     * Sets the tooltip of this button. Should be appended at the constructor.
+     * 
+     * @param tooltip
+     *            The String which'll be the button's tooltip. Line breaks are
+     *            managed via the /n symbol combination.
+     * @return the button
+     */
+    public EditBoxMod setTooltip(String tooltip) {
+        this.tooltip = tooltip.split("/n");
+        return this;
+    }
+}

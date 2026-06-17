@@ -1,0 +1,73 @@
+package net.turevo.rpghudmanafied.gui.hud;
+
+import net.minecraft.client.Minecraft;
+import net.turevo.rpghudmanafied.gui.hud.element.HudElement;
+import net.turevo.rpghudmanafied.gui.hud.element.modern.HudElementAirModern;
+import net.turevo.rpghudmanafied.gui.hud.element.modern.HudElementCompassModern;
+import net.turevo.rpghudmanafied.gui.hud.element.modern.HudElementEntityInspectModern;
+import net.turevo.rpghudmanafied.gui.hud.element.simple.HudElementArmorSimple;
+import net.turevo.rpghudmanafied.gui.hud.element.simple.HudElementExperienceSimple;
+import net.turevo.rpghudmanafied.gui.hud.element.simple.HudElementFoodSimple;
+import net.turevo.rpghudmanafied.gui.hud.element.simple.HudElementHealthMountSimple;
+import net.turevo.rpghudmanafied.gui.hud.element.simple.HudElementHealthSimple;
+import net.turevo.rpghudmanafied.gui.hud.element.simple.HudElementHotbarSimple;
+import net.turevo.rpghudmanafied.gui.hud.element.simple.HudElementLevelSimple;
+
+public class HudSimple extends HudVanilla{
+
+	public HudSimple(Minecraft mc, String hudKey, String hudName) {
+		super(mc, hudKey, hudName);
+	}
+	
+	@Override
+	public HudElement setElementAir() {
+		return new HudElementAirModern();
+	}
+	
+	@Override
+	public HudElement setElementExperience() {
+		return new HudElementExperienceSimple();
+	}
+	
+	@Override
+	public HudElement setElementArmor() {
+		return new HudElementArmorSimple();
+	}
+
+	@Override
+	public HudElement setElementFood() {
+		return new HudElementFoodSimple();
+	}
+	
+	@Override
+	public HudElement setElementHealth() {
+		return new HudElementHealthSimple();
+	}
+	
+	@Override
+	public HudElement setElementHealthMount() {
+		return new HudElementHealthMountSimple();
+	}
+	
+	@Override
+	protected HudElement setElementCompass() {
+		return new HudElementCompassModern();
+	}
+	
+	@Override
+	public HudElement setElementLevel() {
+		return new HudElementLevelSimple();
+	}
+	
+	@Override
+	public HudElement setElementHotbar() {
+		return new HudElementHotbarSimple();
+	}
+	
+	@Override
+	protected HudElement setElementEntityInspect() {
+		return new HudElementEntityInspectModern();
+	}
+	
+	
+}
