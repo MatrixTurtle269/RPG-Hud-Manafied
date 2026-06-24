@@ -2,13 +2,7 @@ package net.turevo.rpghudmanafied.gui.hud;
 
 import net.minecraft.client.Minecraft;
 import net.turevo.rpghudmanafied.gui.hud.element.HudElement;
-import net.turevo.rpghudmanafied.gui.hud.element.hotbar.HudElementArmorHotbar;
-import net.turevo.rpghudmanafied.gui.hud.element.hotbar.HudElementFoodHotbar;
-import net.turevo.rpghudmanafied.gui.hud.element.hotbar.HudElementHealthHotbar;
-import net.turevo.rpghudmanafied.gui.hud.element.hotbar.HudElementHealthMountHotbar;
-import net.turevo.rpghudmanafied.gui.hud.element.hotbar.HudElementHotbarHotbar;
-import net.turevo.rpghudmanafied.gui.hud.element.hotbar.HudElementLevelHotbar;
-import net.turevo.rpghudmanafied.gui.hud.element.hotbar.HudElementWidgetHotbar;
+import net.turevo.rpghudmanafied.gui.hud.element.hotbar.*;
 
 public class HudHotbarWidget extends HudDefault {
 
@@ -24,7 +18,7 @@ public class HudHotbarWidget extends HudDefault {
 
 	@Override
 	public HudElement setElementFood() {
-		return new HudElementFoodHotbar();
+		return new HudElementManaHotbar();
 	}
 
 	@Override
